@@ -1,4 +1,4 @@
-from IPython.kernel.zmq.kernelbase import Kernel
+from ipykernel.kernelbase import Kernel
 from IPython.utils.path import locate_profile
 from IPython.core.displaypub import publish_display_data
 from pexpect import replwrap,EOF,spawn
@@ -219,5 +219,5 @@ class IDLKernel(Kernel):
         return {'status':'ok', 'restart':restart}
 
 if __name__ == '__main__':
-    from IPython.kernel.zmq.kernelapp import IPKernelApp
+    from ipykernel.kernelapp import IPKernelApp
     IPKernelApp.launch_instance(kernel_class=IDLKernel)
