@@ -1,30 +1,24 @@
-#This package is no longer maintained since IDL now has an [official Jupyter kernel](https://www.harrisgeospatial.com/docs/IDL_Kernel.html)
-#IDL/GDL kernel for IPython/Jupyter
+# IDL/GDL kernel for IPython/Jupyter
 
-Demo [Notebook](http://nbviewer.ipython.org/github/lstagner/idl_kernel/blob/master/demo.ipynb)
+#### This package is no longer actively maintained since IDL now has an [official Jupyter kernel](https://www.harrisgeospatial.com/docs/IDL_Kernel.html)
+
+Demo [Notebook](demo.ipynb)
+
+The current version was found to work with pexpect 4.6, jupyter 4.4, and jupyter-notebook 5.7. 
 
 To install:
-
-This requires IPython >3.0 and Pexpect 3.3
-
 ```
 python setup.py install --prefix=~/.local
 ```
-
-This should make an IDL directory containing the kernelspec in the ~/.ipython/kernels directory.
-
-To run:
-``` 
-ipython console --kernel IDL 
-```
 or
 ```
-ipython qtconsole --kernel IDL
-```
-or 
-```
-ipython notebook 
-#Select kernel from dropdown menu
+python3 setup.py install --prefix=~/.local
 ```
 
+This should make an IDL directory containing the kernelspec in `~/.local/share/jupyter/kernels`, and place `idl_kernel.py` in `~/.local/lib/pythonX.X/site-packages`.
 
+To run:
+```
+jupyter notebook 
+#Select IDL kernel from dropdown menu
+```
