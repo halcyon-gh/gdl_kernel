@@ -69,11 +69,11 @@ class IDLKernel(Kernel):
         sig = signal.signal(signal.SIGINT, signal.SIG_DFL)
         try:
             self._executable = find_executable("idl")
-            self._child  = spawn(self._executable,timeout = 300)
+            self._child  = spawn(self._executable,timeout = 300, encoding='utf-8')
             self.idlwrapper = replwrap.REPLWrapper(self._child,u"IDL> ",None)
         except:
             self._executable = find_executable("gdl")
-            self._child  = spawn(self._executable,timeout = 300)
+            self._child  = spawn(self._executable,timeout = 300, encoding='utf-8')
             self.idlwrapper = replwrap.REPLWrapper(self._child,u"GDL> ",None)
         finally:
             signal.signal(signal.SIGINT, sig)
