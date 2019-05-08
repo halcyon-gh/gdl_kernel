@@ -36,7 +36,7 @@ setup(name='IDL_kernel',
       url='https://github.com/lstagner/idl_kernel',
       py_modules=['idl_kernel'],
       cmdclass={'install': install_with_kernelspec},
-      install_requires=['pexpect>=3.3','IPython >= 3.0'],
+#      install_requires=['pexpect>=3.3','IPython >= 3.0'],
       classifiers = [
           'Framework :: Jupyter',
           'License :: OSI Approved :: BSD License',
