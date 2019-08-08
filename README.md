@@ -1,6 +1,4 @@
-# IDL/GDL kernel for IPython/Jupyter
-
-#### This package is no longer actively maintained since IDL now has an [official Jupyter kernel](https://www.harrisgeospatial.com/docs/IDL_Kernel.html)
+# GDL/IDL kernel for IPython/Jupyter
 
 Demo [Notebook](demo.ipynb)
 
